@@ -41,12 +41,18 @@
       
       function slideshow() {
         var image;
-        var elements = document.getElementsByClassName("slides);
+        var elements = document.getElementsByClassName("slides");
         for (image =0; < elements.length; image++) {
           elements[image].style.display = "none";
         }
         index++;
-        if (index>
+        if (index > elements.length) {
+          index = 1;
+        }
+        elements[index-1].style.display = "block";
+        setTimeout(slideshow, 2000);
+      }
+    </script>
  
   <p style=text-align: center;family-font:> Danille Rose</p> 
  <p> Beginner</p>
